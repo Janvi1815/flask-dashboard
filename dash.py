@@ -22,7 +22,7 @@ ports = {
 
 paths = {
     "calculator": "../calculator/calculator.py",
-    "currency_converter": "../currency_converter/app.py",
+    "currency_converter": "https://currency-converter-9oju.onrender.com/",
     "form": "../form/app.py",
     "guessing_game": "../GUESSIN-GAME/guess.py",
     "rps": "../RPS/rps.py",
