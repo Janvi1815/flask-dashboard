@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: dashboard-app
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: python dash.py
+    envVars:
+      - key: FLASK_ENV
+        value: production
+    autoDeploy: true

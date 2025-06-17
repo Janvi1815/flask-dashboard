@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dash.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>🚀 My Flask App Dashboard</h1>
+        
+        <div class="button-grid">
+            <button onclick="loadApp('calculator')">🧮 Calculator</button>
+            <button onclick="loadApp('currency_converter')">💱 Currency</button>
+            <button onclick="loadApp('form')">📄 Form</button>
+            <button onclick="loadApp('guessing_game')">🎲 Guess</button>
+            <button onclick="loadApp('rps')">✊ RPS</button>
+            <button onclick="loadApp('quote')">📜 Quote</button>
+            <button onclick="loadApp('flight')">✈️ Flight</button>
+        </div>
+
+        <div class="iframe-wrapper">
+            {% if iframe_url %}
+                <iframe id="app-frame" src="{{ iframe_url }}"></iframe>
+            {% else %}
+                <iframe id="app-frame" src=""></iframe>
+            {% endif %}
+        </div>
+    </div>
+
+    <script>
+        function loadApp(appName) {
+            window.location.href = `/?app=${appName}`;
+        }
+    </script>
+</body>
+</html>
