@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register Form</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="form-container">
+    <h2>Create Account</h2>
+    <form method="POST" novalidate>
+      {{ form.hidden_tag() }}
+
+      <div class="form-group">
+        {{ form.name.label }}<br>
+        {{ form.name(class="input") }}
+        {% for error in form.name.errors %}
+          <p class="error">{{ error }}</p>
+        {% endfor %}
+      </div>
+
+      <div class="form-group">
+        {{ form.email.label }}<br>
+        {{ form.email(class="input") }}
+        {% for error in form.email.errors %}
+          <p class="error">{{ error }}</p>
+        {% endfor %}
+      </div>
+
+      <div class="form-group">
+        {{ form.password.label }}<br>
+        {{ form.password(class="input") }}
+        {% for error in form.password.errors %}
+          <p class="error">{{ error }}</p>
+        {% endfor %}
+      </div>
+
+      <div class="form-group">
+        {{ form.confirm_password.label }}<br>
+        {{ form.confirm_password(class="input") }}
+        {% for error in form.confirm_password.errors %}
+          <p class="error">{{ error }}</p>
+        {% endfor %}
+      </div>
+
+      <div class="form-group">
+        {{ form.phone.label }}<br>
+        {{ form.phone(class="input") }}
+        {% for error in form.phone.errors %}
+          <p class="error">{{ error }}</p>
+        {% endfor %}
+      </div>
+
+      {{ form.submit(class="btn") }}
+
+    </form>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <p class="flash {{ category }}">{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+  </div>
+</body>
+</html>

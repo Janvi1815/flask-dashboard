@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Currency Converter</h1>
+    <form method="POST">
+      <input type="number" name="amount" placeholder="Enter amount" step="0.01" required>
+
+      <select name="from_currency" required>
+        <option value="USD">USD - US Dollar</option>
+        <option value="INR">INR - Indian Rupee</option>
+        <option value="EUR">EUR - Euro</option>
+        <option value="GBP">GBP - British Pound</option>
+        <option value="JPY">JPY - Japanese Yen</option>
+        <option value="CAD">CAD - Canadian Dollar</option>
+        <option value="AUD">AUD - Australian Dollar</option>
+        <option value="CHF">CHF - Swiss Franc</option>
+      </select>
+
+      <select name="to_currency" required>
+        <option value="USD">USD - US Dollar</option>
+        <option value="INR">INR - Indian Rupee</option>
+        <option value="EUR">EUR - Euro</option>
+        <option value="GBP">GBP - British Pound</option>
+        <option value="JPY">JPY - Japanese Yen</option>
+        <option value="CAD">CAD - Canadian Dollar</option>
+        <option value="AUD">AUD - Australian Dollar</option>
+        <option value="CHF">CHF - Swiss Franc</option>
+      </select>
+
+      <button type="submit">Convert</button>
+    </form>
+
+    {% if result is not none %}
+      <div class="result">
+        <p>Converted Amount: {{ result }}</p>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>

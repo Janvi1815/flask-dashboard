@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+</head>
+<body>
+    <h1>Blog</h1>
+
+    <!-- ✅ FOR LOOP with ID check inside -->
+    {% for blog in blogs %}
+        {% if blog.id == 2 %}
+            <hr>
+            <h2>{{ blog.title }}</h2>
+            <h3>{{ blog.subtitle }}</h3>
+            <p>{{ blog.body }}</p>
+        {% endif %}
+    {% endfor %}
+
+</body>
+</html>

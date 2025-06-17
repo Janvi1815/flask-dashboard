@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modern Calculator</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .calculator {
+      background-color: #2d2d2d;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      width: 300px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      height: 60px;
+      font-size: 28px;
+      margin-bottom: 10px;
+      text-align: right;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      background-color: #1f1f1f;
+      color: #fff;
+    }
+
+    .result {
+      color: #00e676;
+      font-size: 20px;
+      text-align: right;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    button {
+      flex: 1 0 22%;
+      padding: 15px 0;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background-color: #3d3d3d;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    button.op {
+      background-color: #4caf50;
+    }
+
+    button.op:hover {
+      background-color: #43a047;
+    }
+
+    button.ac {
+      background-color: #00bcd4;
+      flex: 1 0 47%;
+    }
+
+    button.equal {
+      background-color: #ff9800;
+      flex: 1 0 100%;
+    }
+
+    button.dot {
+      background-color: #607d8b;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <form method="POST">
+      <input type="text" name="expression" placeholder="Enter expression" autocomplete="off" value="{{ expression }}" />
+      <div class="result">{{ result }}</div>
+      <div class="buttons">
+        <button class="ac" type="submit" name="button" value="AC">AC</button>
+        <button class="op" type="submit" name="button" value="/">/</button>
+        <button class="op" type="submit" name="button" value="*">*</button>
+        <button type="submit" name="button" value="7">7</button>
+        <button type="submit" name="button" value="8">8</button>
+        <button type="submit" name="button" value="9">9</button>
+        <button class="op" type="submit" name="button" value="+">+</button>
+        <button type="submit" name="button" value="4">4</button>
+        <button type="submit" name="button" value="5">5</button>
+        <button type="submit" name="button" value="6">6</button>
+        <button class="op" type="submit" name="button" value="-">-</button>
+        <button type="submit" name="button" value="1">1</button>
+        <button type="submit" name="button" value="2">2</button>
+        <button type="submit" name="button" value="3">3</button>
+        <button type="submit" name="button" value="0">0</button>
+        <button class="dot" type="submit" name="button" value=".">.</button>
+        <button class="equal" type="submit" name="button" value="=">=</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

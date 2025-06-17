@@ -1,0 +1,693 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9fc;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ✅ Updated Navbar */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff; /* changed from dark to white */
+  padding: 15px 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 28px;
+  color: #222; /* dark text */
+}
+
+#navbar {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+#navbar li a {
+  text-decoration: none;
+  color: #333; /* changed for white bg */
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  background-color: #ff6600;
+  color: #fff;
+}
+
+/* Blog Container */
+.container {
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #007BFF;
+}
+
+.meta {
+  color: #777;
+  font-size: 0.9em;
+}
+
+section {
+  margin-bottom: 40px;
+  
+}
+
+section h2 {
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+section img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+pre {
+  background: #eee;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: monospace;
+}
+
+section #img2{
+  margin-left: -40px;
+  padding: 1px;
+}
+
+section #img3{
+  margin-left: 20px;
+}
+
+/* Form + Contact Section */
+.form-contact-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+form {
+  background-color: #fff;
+  flex: 1;
+  min-width: 300px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form h3 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+form input[type="submit"] {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4);
+}
+
+form input[type="submit"]:hover {
+  background-color: #e65c00;
+  transform: scale(1.05);
+}
+
+.contact-box {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-box h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.contact-box p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ✅ New Additions Styling */
+section ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+section ul li {
+  margin-bottom: 8px;
+}
+
+section table {
+  margin-top: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+section table th,
+section table td {
+  padding: 12px;
+  text-align: left;
+}
+
+section table th {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+blockquote {
+  border-left: 5px solid #007BFF;
+  padding-left: 15px;
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+}
+
+section p {
+  margin-bottom: 10px;
+}
+
+/* 🌈 Table of Contents */
+nav {
+  background: #f0f8ff;
+  padding: 15px 25px;
+  margin: 30px auto;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff6600;
+}
+
+/* 🧠 Tip Box */
+.tip-box {
+  background: #fff3cd;
+  padding: 15px 20px;
+  border-left: 5px solid orange;
+  border-radius: 6px;
+  margin: 25px 0;
+  font-size: 1em;
+}
+
+/* 📎 Code Editor */
+#codeBox {
+  width: 100%;
+  padding: 10px;
+  font-family: monospace;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+#output {
+  width: 100%;
+  height: 120px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+/* 📹 YouTube Video */
+iframe {
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* 📘 Glossary */
+.glossary li {
+  margin-bottom: 10px;
+}
+
+/* 🧩 Quiz Answers Toggle */
+#answers {
+  background-color: #e7f3ff;
+  padding: 15px;
+  border-left: 5px solid #007BFF;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+/* 🗂️ Resources */
+.resources ul {
+  list-style: disc inside;
+  margin-top: 10px;
+  line-height: 1.8;
+}
+
+/* 🧑‍💻 Feedback Form */
+.feedback-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  margin-top: 30px;
+}
+
+.feedback-box h3 {
+  margin-bottom: 15px;
+}
+
+.feedback-box input[type="text"],
+.feedback-box textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.feedback-box input[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.feedback-box input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+/* ----------- UPDATED NAVBAR STYLES ADDED BELOW ----------- */
+
+/* Navbar Container */
+#header {
+  background-color: #0d3b66 !important;  /* dark navy blue */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 8px !important;
+  margin: 30px auto !important;
+  max-width: 1100px !important;  /* keep navbar centered and max width */
+}
+
+/* Logo */
+.logo {
+  color: #ffffff !important;  /* white text */
+  font-weight: 700 !important;
+  user-select: none;
+}
+
+/* Navbar Links List */
+#navbar {
+  gap: 25px !important;
+}
+
+/* Navbar Links */
+#navbar li a {
+  color: #ffffff !important;  /* white */
+  font-weight: 600 !important;
+  padding: 8px 14px !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Hover and Active Link */
+#navbar li a:hover,
+#navbar li a.active {
+  background-color: #ff6600 !important;  /* bright orange */
+  color: #fff !important;
+  box-shadow: 0 4px 10px rgba(255, 102, 0, 0.5) !important;
+  transform: translateY(-2px) !important;
+}
+
+
+/* Navbar links text color */
+#navbar li a {
+  color: #222; /* dark text for white/light background */
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Navbar links hover and active state */
+#navbar li a:hover,
+#navbar li a.active {
+  background-color: #ff6600; /* bright orange background on hover */
+  color: #fff; /* white text on hover */
+  box-shadow: 0 4px 10px rgba(255, 102, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
+/* Main Navbar (keep existing colors and background) */
+#header {
+  background-color: #f0f8ff; /* light blue, or whatever you already have */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+#navbar li a {
+  color: #333; /* dark text */
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  background-color: #ff6600; /* orange */
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 102, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Table of Contents nav style */
+nav {
+  margin: 20px 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 10px 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  padding-left: 0;
+}
+
+nav ul li a {
+  color: #444;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Optional: add icons before each link - you can customize */
+nav ul li a::before {
+  content: "•"; /* simple bullet */
+  color: #ff6600; /* orange */
+  font-weight: bold;
+}
+
+/* Hover and active state for TOC links */
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #ff6600;
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 102, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+
+/* Style for the <i class="fa fa-outdent"> icon in the navbar */
+#navbar li i.fa.fa-outdent {
+  color: white;  /* icon color white */
+  font-size: 20px; /* optional: adjust icon size if needed */
+  vertical-align: middle; /* vertically align icon nicely with text */
+}
+
+/* Style for any text inside the icon element */
+#navbar li i.fa.fa-outdent * {
+  color: black !important; /* text inside the icon black */
+}
+
+
+
+
+/* Dropdown menu items text color black */
+.dropdown-menu a {
+  color: black !important;
+  background-color: transparent !important; /* Remove yellow bg */
+  border-radius: 0 !important; /* Remove any rounded bg */
+  box-shadow: none !important; /* Remove any shadow if present */
+}
+
+/* Remove hover background color and round */
+.dropdown-menu a:hover {
+  background-color: transparent !important; /* no bg on hover */
+  color: black !important; /* keep text black */
+  box-shadow: none !important;
+  transform: none !important;
+  cursor: pointer;
+}
+
+/* Remove yellow circle or bullet or any pseudo-element if any */
+.dropdown-menu a::before {
+  content: none !important;
+}
+
+
+/* Style for the Table of Contents icon dropdown */
+#tocDropdown {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 100;
+  width: 150px;
+  border-radius: 0; /* Removes yellow round effect */
+}
+
+/* Remove default li bullets */
+#tocDropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Links in the dropdown */
+#tocDropdown ul li a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: black;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Hover effect: black background and white text */
+#tocDropdown ul li a:hover {
+  background-color: black;
+  color: white;
+}
+
+
+/* Dropdown link style */
+.dropdown-link {
+  display: block;
+  padding: 8px 12px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+}
+
+.dropdown-link:hover {
+  background-color: #333;
+}
+
+
+/* 🎨 Layout Boxes */
+.blog-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.blog-main {
+  background: linear-gradient(145deg, #ffffff, #f0f4ff);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.blog-sidebar {
+  background: linear-gradient(145deg, #fffdf5, #fef0e6);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.blog-sidebar h3 {
+  color: #ff6600;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+}
+
+.blog-sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.blog-sidebar ul li {
+  padding: 10px 0;
+  border-bottom: 1px dashed #ccc;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.blog-sidebar ul li:hover {
+  color: #ff6600;
+  cursor: pointer;
+}
+
+/* Blog Cards */
+.blog-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.blog-card h2 {
+  margin-bottom: 10px;
+  color: #0d3b66;
+}
+
+.blog-card p {
+  color: #555;
+}
+
+/* Section Title style */
+.section-title {
+  text-align: center;
+  font-size: 2em;
+  color: #0d3b66;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #ff6600;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+
+
+

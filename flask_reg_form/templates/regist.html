@@ -1,0 +1,189 @@
+<!-- File: templates/regist.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML, CSS & JavaScript | Blog</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<section id="header" style="position: relative;">
+  <div class="logo">👩🏼‍🎓</div>
+  <ul id="navbar" style="display: flex; list-style: none; gap: 15px; align-items: center;">
+    <li><a href="{{ url_for('home_page') }}">Home</a></li>
+    <li><a class="active" href="#">Blog</a></li>
+    <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+
+    <!-- Icon for Table of Contents -->
+    <li style="position: relative;">
+      <i id="tocIcon" class="fa fa-outdent" aria-hidden="true" style="cursor: pointer; font-size: 20px;"></i>
+
+      <!-- Hidden dropdown for Table of Contents -->
+      <nav id="tocDropdown" style="display: none; position: absolute; top: 30px; left: 0; background: white; border: 1px solid #ddd; padding: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); z-index: 100; width: 150px;">
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li><a href="#html" style="text-decoration: none; color: black;">HTML</a></li>
+          <li><a href="#css" style="text-decoration: none; color: black;">CSS</a></li>
+          <li><a href="#js" style="text-decoration: none; color: black;">JavaScript</a></li>
+          <li><a href="#quiz" style="text-decoration: none; color: black;">Quiz</a></li>
+          <li><a href="#register" style="text-decoration: none; color: black;">Register</a></li>
+        </ul>
+      </nav>
+    </li>
+  </ul>
+</section>
+
+<!-- ✅ Blog Content -->
+<div class="container">
+  <header>
+    <h1>📘 What is HTML, CSS & JavaScript?</h1>
+    <p class="meta">By Janvi Bhatt | June 5, 2025</p>
+  </header>
+
+  <section id="html">
+    <h2>🔤 What is HTML?</h2>
+    <img id="img1" src="https://www.w3schools.com/html/html5.gif" alt="HTML">
+    <p>HTML structures the content of web pages using elements like headings, paragraphs, images, and more.</p>
+    <pre><code>&lt;h1&gt;Hello World&lt;/h1&gt;</code></pre>
+  </section>
+
+  <section id="css">
+    <h2>🎨 What is CSS?</h2>
+    <img id="img2" src="/static/CSS-Logo-2011.png" height="30%" width="30%" alt="CSS">
+    <p>CSS styles your webpage with colors, fonts, spacing, layout, and responsiveness.</p>
+    <pre><code>h1 {
+  color: blue;
+}</code></pre>
+  </section>
+
+  <section id="js">
+    <h2>⚙️ What is JavaScript?</h2>
+    <img id="img3" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width="15%" height="15%" alt="JavaScript">
+    <p>JavaScript makes the site interactive — clicking, animations, and logic handling.</p>
+    <pre><code>document.querySelector('h1').style.color = 'red';</code></pre>
+  </section>
+
+  <div style="background: #fff3cd; padding: 15px; border-left: 5px solid orange; border-radius: 6px; margin: 20px 0;">
+    <strong>💡 Tip:</strong> Always use semantic HTML tags like <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, etc.
+  </div>
+
+  <textarea id="codeBox" rows="5" cols="30">&lt;h1&gt;Hello&lt;/h1&gt;</textarea>
+  <button onclick="runCode()">Run</button>
+  <iframe id="output" style="width:100%; height:100px;"></iframe>
+
+  <section>
+    <h2>📺 Watch & Learn</h2>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/UB1O30fR-EE" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section>
+    <h2>📘 Glossary</h2>
+    <ul>
+      <li><strong>Tag:</strong> HTML elements like <code>&lt;p&gt;</code> or <code>&lt;div&gt;</code></li>
+      <li><strong>Selector:</strong> CSS rule target like <code>h1</code> or <code>.box</code></li>
+      <li><strong>DOM:</strong> Document Object Model used by JavaScript</li>
+    </ul>
+  </section>
+
+  <section id="quiz">
+    <h2>🧠 Quiz</h2>
+    <p>1. What tag is used for paragraphs in HTML?</p>
+    <p>2. What does CSS stand for?</p>
+    <p>3. Write one line of JavaScript to change background color.</p>
+    <button onclick="document.getElementById('answers').style.display='block'">Show Answers</button>
+    <div id="answers" style="display:none;">
+      <p>1. &lt;p&gt;</p>
+      <p>2. Cascading Style Sheets</p>
+      <p>3. document.body.style.backgroundColor = 'lightblue';</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>📚 Resources</h2>
+    <ul>
+      <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+      <li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
+      <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🧑‍💻 Testimonials</h2>
+    <p>"Learning from this blog was amazing!" – A student</p>
+  </section>
+
+  <section id="register">
+    <h2>📝 Register</h2>
+    <form action="/submit" method="post">
+      <label>Enter Name:</label>
+      <input type="text" name="name" placeholder="Your Name" required>
+
+      <label>Email:</label>
+      <input type="email" name="email" placeholder="you@example.com" required>
+
+      <label>Password:</label>
+      <input type="password" name="password" placeholder="Password" required>
+
+      <input type="submit" value="Register">
+    </form>
+  </section>
+</div>
+
+<!-- ✅ Styled Add Blog Post Form -->
+<section id="add-post" style="max-width: 800px; margin: 40px auto; padding: 20px; background: #f4f4f4; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+  <h2 style="margin-bottom: 15px;">📝 Add a Blog Post</h2>
+  <form action="/add_post" method="post" style="display: flex; flex-direction: column; gap: 12px;">
+    <label for="title">Title:</label>
+    <input type="text" name="title" id="title" placeholder="Enter post title" required style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+    <label for="content">Content:</label>
+    <textarea name="content" id="content" rows="5" placeholder="Write your blog content..." required style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+
+    <input type="submit" value="Post" style="padding: 10px 15px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">
+  </form>
+</section>
+
+<!-- ✅ Styled Blog Posts Area -->
+<section id="view-posts" style="max-width: 800px; margin: 20px auto; padding: 20px; background: #ffffff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+  <h2 style="margin-bottom: 20px;">📃 Blog Posts</h2>
+  {% if posts %}
+    {% for post in posts %}
+      <div style="border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin-bottom: 15px; background: #fafafa;">
+        <h3 style="margin: 0 0 10px;">{{ post.title }}</h3>
+        <p style="margin: 0;">{{ post.content }}</p>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p style="text-align: center; color: #888;">No blog posts yet. Add one above!</p>
+  {% endif %}
+</section>
+
+<script>
+  function runCode() {
+    let html = document.getElementById("codeBox").value;
+    document.getElementById("output").srcdoc = html;
+  }
+
+  const tocIcon = document.getElementById('tocIcon');
+  const tocDropdown = document.getElementById('tocDropdown');
+
+  // Toggle dropdown
+  tocIcon.addEventListener('click', (event) => {
+    event.stopPropagation();
+    tocDropdown.style.display = (tocDropdown.style.display === 'block') ? 'none' : 'block';
+  });
+
+  tocDropdown.addEventListener('click', (event) => {
+    event.stopPropagation();
+  });
+
+  document.addEventListener('click', function () {
+    tocDropdown.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>
