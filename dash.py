@@ -8,7 +8,7 @@ render_urls = {
     "currency_converter": "https://currency-converter-9oju.onrender.com/",  # ⛔ update later
     "form": "https://form-3mxn.onrender.com/",
     "guessing_game": "https://your-guess-url.onrender.com",
-    "rps": "https://your-rps-url.onrender.com",
+    "rps": "https://rps-tyi7.onrender.com/",
     "quote": "https://your-quote-url.onrender.com",
     "flight": "https://your-flight-url.onrender.com"
 }
