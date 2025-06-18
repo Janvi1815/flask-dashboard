@@ -9,7 +9,7 @@ render_urls = {
     "form": "https://form-3mxn.onrender.com/",
     "guessing_game": "https://guessing-game-ijwx.onrender.com/",
     "rps": "https://rps-tyi7.onrender.com/",
-    "quote": "https://your-quote-url.onrender.com",
+    "quote": "https://quote-cmgg.onrender.com/",
     "flight": "https://your-flight-url.onrender.com"
 }
 
