@@ -11,8 +11,8 @@ app = Flask(
 )
 
 ports = {
-    "calculator": "https://currency-converter-9oju.onrender.com",
-    "currency_converter": 5002,
+    "calculator":"https://calculator-a6be.onrender.com",
+    "currency_converter":  "https://currency-converter-9oju.onrender.com",
     "form": 5003,
     "guessing_game": 5004,
     "rps": 5005,
