@@ -5,7 +5,7 @@ app = Flask(__name__, template_folder="templates", static_folder="static")
 # Direct Render app links
 render_urls = {
     "calculator": "https://calculator-a6be.onrender.com",
-    "currency_converter": "https://your-currency-url.onrender.com",  # ⛔ update later
+    "currency_converter": "https://currency-converter-9oju.onrender.com/",  # ⛔ update later
     "form": "https://your-form-url.onrender.com",
     "guessing_game": "https://your-guess-url.onrender.com",
     "rps": "https://your-rps-url.onrender.com",
