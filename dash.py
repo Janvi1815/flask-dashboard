@@ -10,7 +10,8 @@ render_urls = {
     "guessing_game": "https://guessing-game-ijwx.onrender.com/",
     "rps": "https://rps-tyi7.onrender.com/",
     "quote": "https://quote-cmgg.onrender.com/",
-    "flight": "https://flight-0h7c.onrender.com/"
+    "flight": "https://flight-0h7c.onrender.com/",
+    "feedback": "https://feedback-p1k3.onrender.com"  # ✅ Added Feedback App
 }
 
 @app.route("/")
