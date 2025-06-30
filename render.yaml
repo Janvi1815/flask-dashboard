@@ -3,8 +3,7 @@ services:
     name: dashboard-app
     env: python
     plan: free
-    buildCommand: ""
-    startCommand: python dash.py
+    startCommand: gunicorn dash:app
     envVars:
       - key: FLASK_ENV
         value: production
